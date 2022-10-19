@@ -1,0 +1,306 @@
+
+body {
+    padding: 0px;
+    margin: 0px;
+    width: 1440px;
+    font-family: "Manrope";
+    background-color: hsl(210, 46%, 95%);
+}
+
+@font-face {
+    font-family: "Manrope";
+    src: url("./Manrope-VariableFont_wght.ttf");
+}
+
+figure {
+    position: absolute;
+    width: 520px;
+    height: 550px;
+    margin: 0px 0px 200px 150px; /* siempre acomodo con padding pero con margin es mejor para acomodar todo el div */
+}
+
+
+main {
+    position: relative;
+    display: flex;
+    width: 630px;
+    height:445px;
+    margin: 150px 40px 200px 670px; /* con el margin es que cuadro el background del div para que me lo cubra todo */
+    background: white;
+    background-size: contain;
+    padding: 33px 70px 50px 63px; /* organiza los elementos dentro del div */
+}
+
+.text h1 {
+    text-align: left;
+    font-weight: 700;
+    color: hsl(217, 19%, 35%);
+    line-height: 12.5mm;
+    letter-spacing: 0.3mm;
+    font-size: 35px;
+    padding-right: 25px;
+}
+
+.text p {
+    text-align: justify;
+    color:  hsl(214, 17%, 51%);
+    line-height: 7.8mm;
+    letter-spacing: 0.3mm;
+    font-size: 20px;
+    padding-right: 25px;
+    font-weight: 700;
+}
+
+.button{
+position: absolute;
+  margin-left: 540px;
+  margin-top: 60px;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  border: none;
+  cursor: none;
+
+} 
+
+.svg1 {
+    margin: 0px;
+    padding: 13px 0px 0px 8px;
+    fill:hsl(214, 17%, 51%) ;
+} /* luego de editar el svg en html aqui con padding lo centro dentro del boton*/
+  /* le quito el fill al svg en html y lo coloco aqui para despues poder cambiar en hover*/
+
+.button:hover {
+  background-color: hsl(214, 17%, 51%);
+  
+}
+
+.svg1:hover {
+    fill: white;
+}
+
+
+footer img {
+   position: absolute;
+   border-radius: 50%;
+   height: 80px;
+   margin-top: 40px;
+}
+
+footer p {
+    display:block;
+    font-size: 18px;
+    color: hsl(217, 19%, 35%);
+    font-weight: 700;
+    margin: 30px 0px 0px 110px;
+    padding-top: 50px;
+    height: 0px;
+
+}
+
+.span {
+    color:  hsl(214, 17%, 51%);
+    font-weight: 500;
+    padding-top: 0px;
+}
+
+aside{
+    position: absolute;
+    top: 430px;
+    left: 1115px;
+    display:flex;
+    background-color:hsl(217, 19%, 35%);
+    width: 350px;
+    height: 80px;
+    margin-bottom: 40px;
+    border-radius: 20px;
+    padding: 0px 0px;
+}
+
+
+aside h2 {
+    color: hsl(212, 23%, 69%);
+    letter-spacing: 0.7ch;
+    font-size: 25px;
+    font-weight: 700;
+    padding: 5px 25px 0px 50px;
+}
+
+aside svg{
+    padding: 20px 20px 0px 0px ;
+    height: 70px;
+    width: 30px;
+} /* si disminuyo el width y el padding rigth me junta mas los elmentos en linea */
+
+
+aside:after,
+aside:before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 46%; /* que tan a la izquierda del div*/
+    width: 0px;
+    height: 0px;
+    border-style: solid;
+} /* asi pongo un triangulo o figura en el borde de un div. con este doy forma a la figuta*/
+
+
+
+aside:after {
+    top: 80px; /* que tan abajo del div*/
+    border-color: hsl(217, 19%, 35%) transparent transparent transparent;
+    border-width: 20px;
+} 
+
+
+aside:before {
+    top: 80px;
+    border-color: hsl(217, 19%, 35%) transparent transparent transparent ;
+    border-width: 21px;
+} /* con este y el que le sigue arriba le doy color y direccion ( depende donde ponga el border color si de primero o de ultimo de los transparent */
+  /* y tbn le doy tamaño con los border width */
+
+
+  @media (max-width: 375px ) {
+     
+    
+body {
+    padding: 0px;
+    border: 0px;
+    width: 360px;
+}
+
+
+figure img {
+    position: absolute;
+    top: 50px;
+    left: -130px; /* el left negativo tbn me ayuda a orientar hacia la izq */
+    width: 80%; /* con porcentaje me achica sin recortar */
+    height: 300px;
+    margin: 20px 100px 0px 0px; 
+    padding: 20px 100px 0px 0px; 
+}
+
+
+main {
+    position: relative;
+    display: inline-block;
+    width: 333px;
+    height:350px;
+    margin: 340px 20px 100px 20px; /* con el margin es que cuadro el background del div para que me lo cubra todo */
+    background: white;
+    background-size: contain;
+    padding: 33px 43px 0px 40px; /* organiza los elementos dentro del div */
+}
+
+.text h1 {
+    text-align: justify;
+    font-weight: 900; /* incrementando o reduciendo esto resuelvo lo de texto borroso en la version mobile */
+    color: hsl(217, 19%, 35%);
+    line-height: 7.5mm;
+    letter-spacing: 0.1mm;
+    font-size: 20px;
+    padding-right: 10px;
+}
+
+.text p {
+    text-align: left;
+    color:  hsl(214, 17%, 51%);
+    line-height: 6.5mm;
+    letter-spacing: 0.2mm;
+    font-size: 15px;
+    padding-right: 7px;
+    font-weight: 300;
+}
+
+.button{
+position: absolute;
+  margin-left: 280px;
+  margin-top: 30px;
+  width: 45px;
+  height: 45px;
+  border-radius: 40%;
+  border: none;
+  cursor: none;
+ z-index: 2; /* este se sobrepone a donde ponga z-index 1 */
+} 
+
+
+footer img {
+   position: absolute;
+   border-radius: 50%;
+   height: 60px;
+   margin-top: 10px;
+}
+
+footer p {
+    display:block;
+    font-size: 15px;
+    color: hsl(217, 19%, 35%);
+    font-weight: 700;
+    margin: 30px 0px 0px 80px;
+    padding-top: 20px;
+    height: 0px;
+
+}
+
+
+aside{
+    position: absolute;
+    top: 640px;
+    left: 20px;
+    display:flex;
+    background-color:hsl(217, 19%, 35%);
+    width: 410px;
+    height: 80px;
+    margin-bottom: 40px;
+    border-radius: 30px;
+    padding: 0px 0px;
+    z-index: 1;
+}
+
+
+aside h2 {
+    color: hsl(212, 23%, 69%);
+    letter-spacing: 0.7ch;
+    font-size: 20px;
+    font-weight: 700;
+    padding: 10px 25px 0px 60px;
+}
+
+aside svg{
+    padding: 20px 20px 0px 0px ;
+    height: 60px;
+    width: 20px;
+} /* si disminuyo el width y el padding rigth me junta mas los elmentos en linea */
+
+
+aside:after,
+aside:before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0%; /* que tan a la izquierda del div*/
+    width: 0px;
+    height: 0px;
+    border-style: solid;
+} /* asi pongo un triangulo o figura en el borde de un div. con este doy forma a la figuta*/
+
+
+
+aside:after {
+    top: 0px; /* que tan abajo del div*/
+    border-color: hsl(217, 19%, 35%) transparent transparent transparent;
+    border-width: 0px;
+} 
+
+
+aside:before {
+    top: 0px;
+    border-color: hsl(217, 19%, 35%) transparent transparent transparent ;
+    border-width: 0px;
+} /* con este y el que le sigue arriba le doy color y direccion ( depende donde ponga el border color si de primero o de ultimo de los transparent */
+  /* y tbn le doy tamaño con los border width */
+
+
+  }
